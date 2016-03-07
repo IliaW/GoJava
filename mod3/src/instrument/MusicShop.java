@@ -3,5 +3,5 @@ package instrument;
 import java.util.List;
 
 public class MusicShop {
-    List<MusicalInstrument> shop;
+    private List<MusicalInstrument> shop;
 }
