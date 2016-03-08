@@ -1,4 +1,4 @@
 package instrument;
 
-public class MusicalInstrument {
+public abstract class MusicalInstrument {
 }

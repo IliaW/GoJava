@@ -1,4 +1,4 @@
 package file;
 
-public class File {
+public abstract class File {
 }

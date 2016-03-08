@@ -1,4 +1,4 @@
 package flowers;
 
-public class Flowers {
+public abstract class Flowers {
 }
