@@ -4,13 +4,10 @@
  */
 
 public class Temperature {
-
-    double fInC(double a){
-
-        return ((a-32)*(5/9));
+    double fInC(double temperatureF){
+        return ((temperatureF-32)*(5/9));
     }
-    double cInF(double a){
-
-        return ((a*9/5)+32);
+    double cInF(double temperatureC){
+        return ((temperatureC*9/5)+32);
     }
 }

@@ -12,8 +12,8 @@ import java.util.Scanner;
  */
 
 public class Main {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
+
         Geometry geometry = new Geometry();
         Temperature temperature = new Temperature();
         Coordinates coordinates = new Coordinates();
@@ -24,70 +24,59 @@ public class Main {
                 " 3. Відстань між двома точками");
         Scanner num = new Scanner(System.in);
         int numMenu = num.nextInt();
-        switch (numMenu)
-        {
-            case 1:
-            {
+        switch (numMenu) {
+            case 1: {
                 System.out.println(" 1. Розрахунок площі трикутника " + "\n" +
-                                     " 2. Розрахунок площі прямокутника " + "\n" +
-                                       " 3. Розрахунок площі круга");
+                        " 2. Розрахунок площі прямокутника " + "\n" +
+                        " 3. Розрахунок площі круга");
                 int numGeometry = num.nextInt();
-                switch (numGeometry)
-                {
-                    case 1:
-                    {
+                switch (numGeometry) {
+                    case 1: {
                         System.out.println("Введіть довжину основи трикутника");
-                        double a = num.nextDouble();
+                        double length = num.nextDouble();
                         System.out.println("Введіть висоту трикутника");
-                        double h = num.nextDouble();
-                        System.out.println(geometry.triangle(a,h));
+                        double height = num.nextDouble();
+                        System.out.println(geometry.triangle(length,height));
                         break;
                     }
-                    case 2:
-                    {
+                    case 2: {
                         System.out.println("Введіть довжину прямокутника");
-                        double a = num.nextDouble();
+                        double length = num.nextDouble();
                         System.out.println("Введіть ширину прямокутника");
-                        double b = num.nextDouble();
-                        System.out.println(geometry.rectangle(a,b));
+                        double width = num.nextDouble();
+                        System.out.println(geometry.rectangle(length,width));
                         break;
                     }
-                    case 3:
-                    {
+                    case 3: {
                         System.out.println("Введіть радіус кола");
-                        double r = num.nextDouble();
-                        System.out.println(geometry.circle(r));
+                        double radius = num.nextDouble();
+                        System.out.println(geometry.circle(radius));
                         break;
                     }
                 }
                 break;
             }
-            case 2:
-            {
+            case 2: {
                 System.out.println(" 1. Перетворити Фаренгейти в Цельсії " + "\n" +
-                                    " 2. Перетворити Цельсії в Фаренгейти ");
+                        " 2. Перетворити Цельсії в Фаренгейти ");
                 int numTemperature = num.nextInt();
-                switch (numTemperature)
-                {
-                    case 1:
-                    {
+                switch (numTemperature) {
+                    case 1: {
                         System.out.println("Введіть температуру по Фаренгейту");
-                        double t = num.nextDouble();
-                        System.out.println(temperature.fInC(t));
+                        double temperatureF = num.nextDouble();
+                        System.out.println(temperature.fInC(temperatureF));
                         break;
                     }
-                    case 2:
-                    {
+                    case 2: {
                         System.out.println("Введіть температуру по Цельсію");
-                        double t = num.nextDouble();
-                        System.out.println(temperature.cInF(t));
+                        double temperatureC = num.nextDouble();
+                        System.out.println(temperature.cInF(temperatureC));
                         break;
                     }
                 }
                 break;
             }
-            case 3:
-            {
+            case 3: {
                 System.out.println("Введіть X1");
                 double x1 = num.nextDouble();
                 System.out.println("Введіть Y1");
