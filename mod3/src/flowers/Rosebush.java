@@ -1,15 +1,16 @@
 package flowers;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class Rosebush {
-    private List<Rose> roses;
 
-    public List<Rose> getRoses() {
-        return roses;
+    private ArrayList<Rose> roses;
+
+    public Rosebush(ArrayList<Rose> roses){
+        this.roses = roses;
     }
 
-    public void setRoses(List<Rose> roses) {
-        this.roses = roses;
+    public ArrayList<Rose> getRoses() {
+        return roses;
     }
 }

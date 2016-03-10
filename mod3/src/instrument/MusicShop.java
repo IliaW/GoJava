@@ -1,15 +1,16 @@
 package instrument;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class MusicShop {
-    private List<MusicalInstrument> instruments;
 
-    public List<MusicalInstrument> getInstruments() {
+    private ArrayList<MusicalInstrument> instruments;
+
+    public ArrayList<MusicalInstrument> getInstruments() {
         return instruments;
     }
 
-    public void setInstruments(List<MusicalInstrument> instruments) {
+    public void setInstruments(ArrayList<MusicalInstrument> instruments) {
         this.instruments = instruments;
     }
 }
