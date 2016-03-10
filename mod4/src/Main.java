@@ -63,14 +63,14 @@ public class Main {
                 switch (numTemperature) {
                     case 1: {
                         System.out.println("Введіть температуру по Фаренгейту");
-                        double temperatureF = num.nextDouble();
-                        System.out.println(temperature.fInC(temperatureF));
+                        double tempInFahrenheit = num.nextDouble();
+                        System.out.println(temperature.fInC(tempInFahrenheit));
                         break;
                     }
                     case 2: {
                         System.out.println("Введіть температуру по Цельсію");
-                        double temperatureC = num.nextDouble();
-                        System.out.println(temperature.cInF(temperatureC));
+                        double tempInCelsius = num.nextDouble();
+                        System.out.println(temperature.cInF(tempInCelsius));
                         break;
                     }
                 }

@@ -4,10 +4,15 @@
  */
 
 public class Temperature {
-    double fInC(double temperatureF){
-        return ((temperatureF-32)*(5/9));
+
+    public final double CONST_32 = 32;
+    public final double CONST_5 = 5;
+    public final double CONST_9 = 9;
+
+    double fInC(double tempInFahrenheit){
+        return ((tempInFahrenheit-CONST_32)*(CONST_5/CONST_9));
     }
-    double cInF(double temperatureC){
-        return ((temperatureC*9/5)+32);
+    double cInF(double tempInCelsius){
+        return ((tempInCelsius*CONST_9/CONST_5)+CONST_32);
     }
 }
