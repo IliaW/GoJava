@@ -1,15 +1,15 @@
 package file;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class Directory {
-   private List <File> files;
+   private ArrayList <File> files;
 
-   public List<File> getFiles() {
+   public ArrayList<File> getFiles() {
       return files;
    }
 
-   public void setFiles(List<File> files) {
+   public void setFiles(ArrayList<File> files) {
       this.files = files;
    }
 }
