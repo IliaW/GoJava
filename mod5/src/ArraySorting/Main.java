@@ -12,7 +12,7 @@ public class Main {
 
         // Заповнюємо масив рандомними значеннями
         for (int i = 0; i < num; i++) {
-            array[i] = (int) (Math.random() * 1000) - 500;
+            array[i] = (int) (Math.random() * 4);
         }
         System.out.println("Заданий масив       " + Arrays.toString(array));
 

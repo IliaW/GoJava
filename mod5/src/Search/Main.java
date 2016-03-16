@@ -15,7 +15,7 @@ public class Main {
             array[i] = in;
         }
         System.out.println("Заданий масив " + Arrays.toString(array));
-        searchMinAndMax search = new searchMinAndMax();
+        searchValue search = new searchValue();
         System.out.println("Мінімальне число: " + search.min(array));
         System.out.println("Максимальне число: " + search.max(array));
     }

@@ -1,6 +1,6 @@
 package Search;
 
-class searchMinAndMax {
+public class searchValue {
     int min(int[] array) {
         int minNum = array[0];
         for (int i = 0; i < array.length; i++) {
