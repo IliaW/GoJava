@@ -1,17 +1,9 @@
+package HomeWorkExep_61.HomeWork4;
+
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
-/**
- Создать класс, вычисляющий площадь простых геометрических фигур:
- треугольника, прямоугольника и круга.
-
- Создать класс преобразующий значение температуры по шкале Цельсия
- в значение по шкале Фаренгейта и в обратном направлении.
-
- Создать класс вычисляющий расстояние между двумя точками, представленными
- координатами в двумерном пространстве (x1, y1), (x2, y2).
- */
-
-public class Main {
+public class Main_Ex {
     public static void main(String[] args) {
 
         Geometry geometry = new Geometry();
@@ -22,7 +14,9 @@ public class Main {
                 " 1. Розрахунок площі " + "\n" +
                 " 2. Перетворення температур " + "\n" +
                 " 3. Відстань між двома точками");
-        Scanner num = new Scanner(System.in);
+
+        try {
+            Scanner num = new Scanner(System.in);
         int numMenu = num.nextInt();
         switch (numMenu) {
             case 1: {
@@ -85,9 +79,12 @@ public class Main {
                 double x2 = num.nextDouble();
                 System.out.println("Введіть Y2");
                 double y2 = num.nextDouble();
-                System.out.println(coordinates.distance(x1,y1,x2,y2));
+                System.out.println(coordinates.distance(x1, y1, x2, y2));
                 break;
             }
+        }
+        }catch (InputMismatchException e){
+            System.out.println("Невірний формат вводу");
         }
     }
 }
