@@ -18,9 +18,9 @@ public class MusicShop {
 //        return "MusicShop{" + "Musical instrument = " + instruments + '}';
 //    }
 
-    public List<MusicalInstrument> prepareListOfInstrumentsToRemove(Map<String, Integer> order) throws NoInstrumentExсept {
+    public void prepareListOfInstrumentsToRemove(Map<String, Integer> order) throws NoInstrumentExсept {
 
-        List<MusicalInstrument> listToRemove = new ArrayList<>();
+        List<MusicalInstrument> prepareList = new ArrayList<>();
 
         for (Map.Entry<String, Integer> orderMap : order.entrySet()) {
             String musInstrumentsType = orderMap.getKey();
@@ -30,7 +30,7 @@ public class MusicShop {
 
             for (MusicalInstrument instrument : instruments) {
                 if (instrument.getType().equals(musInstrumentsType) && numberFound < numberOfInstruments) {
-                    listToRemove.add(instrument);
+                    prepareList.add(instrument);
                     numberFound++;
                 }
             }
@@ -38,7 +38,25 @@ public class MusicShop {
                 throw new NoInstrumentExсept("Music shop doesn't have enough " + musInstrumentsType + "s");
             }
         }
-        return listToRemove;
+
+        // Перевод списка инструментов в строку с перечнем инструментов и их количеством
+        System.out.print("Order:        ");
+        int numpiano = 0;
+        int numtrumpet = 0;
+        int numguitar = 0;
+        for (MusicalInstrument instrument : prepareList) {
+            String musInstruments = instrument.getType();
+            if (musInstruments == "piano") {
+                numpiano++;
+            }
+            if (musInstruments == "trumpet") {
+                numtrumpet++;
+            }
+            if (musInstruments == "guitar") {
+                numguitar++;
+            }
+        }
+        System.out.println(numpiano + " pianos   " + numtrumpet + " trumpets   " + numguitar + " guitars  ");
     }
 
     public void removeOrderedInstrumentsFromMusicShop(Map<String, Integer> order) {

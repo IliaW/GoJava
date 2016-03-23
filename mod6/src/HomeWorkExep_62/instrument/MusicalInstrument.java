@@ -6,6 +6,6 @@ public abstract class MusicalInstrument {
 
     @Override
     public String toString() {
-        return "Musical instrument{" + getType() + "}";
+        return getType();
     }
 }

@@ -6,6 +6,7 @@ public class Main {
 
 
     public static void main(String[] args) {
+
         // Создание ссылки на объект
         MusicShop musicShop = new MusicShop();
 
@@ -26,18 +27,14 @@ public class Main {
 
         // Создание списка покупок
         Map<String, Integer> order = new HashMap<>();
-        {
-            Scanner num = new Scanner(System.in);
-            System.out.println("Creating a shopping list" + "\n" + "How to buy guitars");
-            int howManyGuitars = num.nextInt();
-            order.put("guitar", howManyGuitars);
-            System.out.println("How to buy pianos");
-            int howManyPianos = num.nextInt();
-            order.put("piano", howManyPianos);
-            System.out.println("How to buy trumpets");
-            int howManyTrumpets = num.nextInt();
-            order.put("trumpet", howManyTrumpets);
-        }
+        Scanner num = new Scanner(System.in);
+        System.out.println("Creating a shopping list" + "\n" + "How many to buy guitars");
+        order.put("guitar", num.nextInt());
+        System.out.println("How many to buy pianos");
+        order.put("piano", num.nextInt());
+        System.out.println("How many to buy trumpets");
+        order.put("trumpet", num.nextInt());
+
 
         // Вывод на экран всех инструментов в магазине
         System.out.print("All in store: ");
@@ -55,21 +52,8 @@ public class Main {
 
         //
         try {
-            System.out.print("Order:        ");
-            for (Map.Entry<String, Integer> forNam : order.entrySet()) {
-                String musInstruments = forNam.getKey();
-                int number = 0;
-                for (MusicalInstrument instrument : instruments) {
-                    if (instrument.getType().equals(musInstruments)) {
-                        number++;
-                    }
-                }
-                System.out.print(number + " " + musInstruments + "s   ");
-            }
-            System.out.println("");
             musicShop.prepareListOfInstrumentsToRemove(order);
             musicShop.removeOrderedInstrumentsFromMusicShop(order);
-
 
             // Вывод на экран списка оставшихся в магазине инструментов
             System.out.print("After buying: ");
