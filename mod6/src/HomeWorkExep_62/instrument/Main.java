@@ -28,12 +28,13 @@ public class Main {
         // Создание списка покупок
         Map<String, Integer> order = new HashMap<>();
         Scanner num = new Scanner(System.in);
-        System.out.println("Creating a shopping list" + "\n" + "How many to buy guitars");
-        order.put("guitar", num.nextInt());
+        System.out.println("Creating a shopping list");
         System.out.println("How many to buy pianos");
         order.put("piano", num.nextInt());
         System.out.println("How many to buy trumpets");
         order.put("trumpet", num.nextInt());
+        System.out.println("How many to buy guitars");
+        order.put("guitar", num.nextInt());
 
 
         // Вывод на экран всех инструментов в магазине
