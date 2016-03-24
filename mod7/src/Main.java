@@ -5,12 +5,12 @@ public class Main {
     public static void main(String[] args) {
         try {
             ScanRandomSort scanRandomSort = new ScanRandomSort();
-            System.out.println("Введіть довжину масива");
+            System.out.println("Enter the length of the array");
             scanRandomSort.scanAndRandom();
-            System.out.println("Заданий масив       " + Arrays.toString(scanRandomSort.array));
-            System.out.println("Відсортований масив " + Arrays.toString(scanRandomSort.sorting(scanRandomSort.array)));
+            System.out.println("The specified array: " + Arrays.toString(scanRandomSort.array));
+            System.out.println("Sorted array:        " + Arrays.toString(scanRandomSort.sorting(scanRandomSort.array)));
         } catch (InputMismatchException e) {
-            System.out.println("Невірний формат вводу");
+            System.out.println("Invalid input format");
         }
     }
 }

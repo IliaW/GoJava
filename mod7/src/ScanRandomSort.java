@@ -1,22 +1,22 @@
 import java.util.Scanner;
 
 public class ScanRandomSort {
-    public int[] array;
+    int[] array;
 
     public int[] scanAndRandom() {
 
-        // Введення з клавіатури довжини масиву
+        // Keyboard input array length
         int num = new Scanner(System.in).nextInt();
         array = new int[num];
 
-        // Заповнення масива рандомними значеннями
+        // Filling an array of random values
         for (int i = 0; i < num; i++) {
             array[i] = (int) (Math.random() * 100) - 50;
         }
         return array;
     }
 
-    // Реалізуємо сортування вставкою
+    // Realize sorting insert
     public int[] sorting(int[] arr) {
         for (int k = 1; k < arr.length; k++) {
             for (int j = k; j > 0 && arr[j - 1] > arr[j]; j--) {
@@ -26,8 +26,8 @@ public class ScanRandomSort {
         return arr;
     }
 
-    //Зміна місцями двох значень
-    public int[] swap(int j) {
+    // Replacement seats two values
+    private int[] swap(int j) {
         int value;
         value = array[j - 1];
         array[j - 1] = array[j];
