@@ -1,9 +1,9 @@
 package flowers;
 
-import java.util.ArrayList;
+import java.util.TreeSet;
 
 public class OutputOnDisplay {
-    OutputOnDisplay(ArrayList<Flowers> flowers) {
+    OutputOnDisplay(TreeSet<Flowers> flowers) {
         System.out.println("     ----------------------------------------------------" +
                 "\n" + "     | " + "Class" +
                 "\t | "          + "Name" +
@@ -11,9 +11,7 @@ public class OutputOnDisplay {
                 "\t | "          + "Price" +
                 "\t|" + "\n" +
                 "     ----------------------------------------------------");
-        for (Flowers type : flowers) {
-            System.out.print(type);
-        }
+        flowers.forEach(System.out::print);
         System.out.println("     ----------------------------------------------------");
     }
 }

@@ -1,14 +1,14 @@
 package flowers;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.TreeSet;
 
 public class Main {
 
     public static void main(String[] args) {
 
         // Creating flowers array
-        ArrayList<Flowers> flowers = new ArrayList<>();
+        TreeSet<Flowers> flowers = new TreeSet<>();
         flowers.add(new Aster("Aster    ", "violet", 1500));
         flowers.add(new Aster("Aster    ", "white", 190));
         flowers.add(new Chamomile("Chamomile", "white", 999));

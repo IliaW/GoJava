@@ -5,18 +5,6 @@ public abstract class Flowers implements Comparable<Flowers> {
     String name, color;
     int price;
 
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getColor() {
         return color;
     }
@@ -31,10 +19,9 @@ public abstract class Flowers implements Comparable<Flowers> {
 
     @Override
     public int compareTo(Flowers prices) {
-        int flowerPrice = ((Flowers)prices).getPrice();
+        int flowerPrice = prices.getPrice();
         return this.price - flowerPrice;
     }
-
 
     @Override
     public String toString() {
@@ -43,6 +30,4 @@ public abstract class Flowers implements Comparable<Flowers> {
                 "\t  | " + getColor() +
                 "\t | "  + getPrice() + "\t    |" + "\n";
     }
-
-
 }
