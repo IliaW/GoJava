@@ -18,9 +18,6 @@ public class Main {
         flowers.add(new Tulip("Tulip    ", "blue", 2000));
         flowers.add(new Tulip("Tulip    ", "yellow", 1000));
 
-        //Sorting
-
-
         // Output on display array flowers
         new OutputOnDisplay(flowers);
     }

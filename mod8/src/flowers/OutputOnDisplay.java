@@ -6,9 +6,10 @@ public class OutputOnDisplay {
     OutputOnDisplay(ArrayList<Flowers> flowers) {
         System.out.println("     ----------------------------------------------------" +
                 "\n" + "     | " + "Class" +
-                "\t | " + "Name" +
+                "\t | "          + "Name" +
                 "\t          | " + "Color" +
-                "\t | " + "Price" + "\t|" + "\n" +
+                "\t | "          + "Price" +
+                "\t|" + "\n" +
                 "     ----------------------------------------------------");
         for (Flowers type : flowers) {
             System.out.print(type);
