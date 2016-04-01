@@ -19,8 +19,7 @@ public abstract class Flowers implements Comparable<Flowers> {
 
     @Override
     public int compareTo(Flowers prices) {
-        int flowerPrice = prices.getPrice();
-        return this.price - flowerPrice;
+        return this.price - prices.getPrice();
     }
 
     @Override
