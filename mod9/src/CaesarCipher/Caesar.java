@@ -25,7 +25,7 @@ public class Caesar {
 
     String encode(String text) {
         StringBuilder builder = new StringBuilder();
-        int key = (int) (Math.random() * 24) + 1; // "* 24) + 1" is not equal to 26 and "+1" key is not equal to 0
+        int key = (int) (Math.random() * 24) + 1;
         System.out.println("Key = " + key);
         for (int i = 0; i < text.length(); i++) {
             int index = alphabet.indexOf(text.charAt(i));

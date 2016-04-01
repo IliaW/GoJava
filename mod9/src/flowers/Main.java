@@ -1,6 +1,7 @@
 package flowers;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
 
@@ -23,9 +24,29 @@ public class Main {
         Bouquet bouquet = new Bouquet(flowers);
 
         // Print flowers from bouquet
-        System.out.println("Bouquet:");
-        for (Flowers flower :bouquet.getFlowers()){
-            System.out.println(flower.getName());
+        Scanner scanner = new Scanner(System.in);
+        Caesar caesar = new Caesar();
+
+        //Encode flowers
+        System.out.println("Enter key");
+        int key = scanner.nextInt();
+        System.out.println("Bouquet(encode):");
+
+        // Preservation of the list of coded text
+        ArrayList<String> arrayEncodeFlowers = new ArrayList<>();
+        for (Flowers flower : bouquet.getFlowers()) {
+            String encode = caesar.encode(flower.getName(), key);
+            System.out.println(encode);
+            arrayEncodeFlowers.add(encode);
+        }
+        //Text transcript
+        System.out.println("\nEnter key for decrypt");
+        int keyDecrypt = scanner.nextInt();
+        System.out.println("Bouquet(decrypt):");
+        for (String flower : arrayEncodeFlowers) {
+            String decrypt = caesar.decrypt(flower, keyDecrypt);
+            System.out.println(decrypt);
+
         }
     }
 }
