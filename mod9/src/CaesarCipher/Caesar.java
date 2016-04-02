@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Caesar {
 
-    List<Character> alphabet = new ArrayList<>();
+    private List<Character> alphabet = new ArrayList<>();
     private final static char[] PUNCTUATION = {'.', ',', ';', ':', '!', '?', '-', ' '};
 
     Caesar() {
@@ -23,7 +23,7 @@ public class Caesar {
         }
     }
 
-    String encode(String text) {
+    public String encode(String text) {
         StringBuilder builder = new StringBuilder();
         int key = (int) (Math.random() * 24) + 1;
         System.out.println("Key = " + key);
@@ -35,7 +35,7 @@ public class Caesar {
         return builder.toString();
     }
 
-    String decrypt(String text, int key) {
+    public String decrypt(String text, int key) {
         StringBuilder decryptText = new StringBuilder();
         for (int i = 0; i < text.length(); i++) {
             int index = alphabet.indexOf(text.charAt(i));

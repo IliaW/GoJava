@@ -46,7 +46,6 @@ public class Main {
         for (String flower : arrayEncodeFlowers) {
             String decrypt = caesar.decrypt(flower, keyDecrypt);
             System.out.println(decrypt);
-
         }
     }
 }
