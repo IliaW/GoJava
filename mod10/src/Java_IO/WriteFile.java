@@ -9,5 +9,6 @@ public class WriteFile {
         FileWriter writer = new FileWriter(name + ".txt");
         writer.write(text);
         writer.flush();
+        writer.close();
     }
 }
