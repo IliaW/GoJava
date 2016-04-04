@@ -10,7 +10,9 @@ public class Main {
         Caesar caesar = new Caesar();
         System.out.println("Enter the text you want to decrypt");
         String inputText = scanner.nextLine();
-        String outText = caesar.encode(inputText);
+        System.out.println("Enter the key");
+        int inputKey = scanner.nextInt();
+        String outText = caesar.encode(inputText,inputKey);
         System.out.println("\nCiphertext:\n" + outText);
 
         // Decoding the text
