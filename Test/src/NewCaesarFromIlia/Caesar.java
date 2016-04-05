@@ -7,7 +7,7 @@ public class Caesar {
 
     private List<Character> alphabet = new ArrayList<>();
 
-    Caesar() {
+    public Caesar() {
         for (char c = ' '; c <= '~'; c++) {
             alphabet.add(c);
         }
