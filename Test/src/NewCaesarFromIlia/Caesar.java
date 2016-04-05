@@ -8,7 +8,7 @@ public class Caesar {
     private List<Character> alphabet = new ArrayList<>();
 
     Caesar() {
-        for (char c = ' '; c <= '~'; c++) {   // Loading all ASCII characters
+        for (char c = ' '; c <= '~'; c++) {
             alphabet.add(c);
         }
     }
@@ -16,8 +16,8 @@ public class Caesar {
     public String encode(String text, int key) {
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < text.length(); i++) {
-            int index = alphabet.indexOf(text.charAt(i)); // Search the library letter and extracting of her index
-            index = (index + key + alphabet.size()) % alphabet.size(); // Encryption
+            int index = alphabet.indexOf(text.charAt(i));
+            index = (index + key + alphabet.size()) % alphabet.size();
             builder.append(alphabet.get(index));
         }
         return builder.toString();
