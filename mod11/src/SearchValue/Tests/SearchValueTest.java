@@ -18,14 +18,14 @@ public class SearchValueTest {
     }
 
     @Test(timeout = 1000)
-    public void min() throws Exception {
+    public void search_Minimum_InTheArray_minus3Return() throws Exception {
         final int minNum = search.min(array);
 
         Assert.assertEquals(-3, minNum);
     }
 
     @Test(timeout = 1000)
-    public void max() throws Exception {
+    public void search_Maximum_InTheArray_5Return() throws Exception {
         final int maxNum = search.max(array);
 
         Assert.assertEquals(5, maxNum);
