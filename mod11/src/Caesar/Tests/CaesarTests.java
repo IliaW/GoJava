@@ -14,7 +14,6 @@ public class CaesarTests {
         caesar = new Caesar();
     }
 
-    //Параметризировать
     @Test
     public void encode___text_ABC_abc_123_Key3___DEF_def_456_Return() throws Exception {
         final String result1 = caesar.encode("abc", 3);
